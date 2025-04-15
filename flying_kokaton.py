@@ -25,7 +25,7 @@ def main():
 
         x = tmr
         key_lst = pg.key.get_pressed()
-        dx, dy = 0, 0
+        dx, dy = -1, 0
         if key_lst[pg.K_UP]:
             dy -= 1
         if key_lst[pg.K_DOWN]:
@@ -42,18 +42,14 @@ def main():
         screen.blit(koukaton_flip, kk_rct)
         pg.display.update()
 
-        if key_lst[pg.K_RIGHT]:
-            tmr -= 1
-        else:
-            tmr += 1        
+        tmr += 1        
 
 
         clock.tick(200)
 
         if tmr > 3199:
             tmr = 0
-        if tmr < 0:
-            tmr = 3199
+
         
 
 
